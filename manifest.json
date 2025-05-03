@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "Auto Trading Plugin",
+  "version": "1.0",
+  "description": "Automates trading on Zerodha Kite based on candlestick patterns.",
+  "permissions": [
+    "scripting",
+    "activeTab",
+    "storage"
+  ],
+  "host_permissions": [
+    "https://kite.zerodha.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://kite.zerodha.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
