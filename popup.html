@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Auto Trading Plugin</title>
+  <style>
+    .toggle-button {
+      margin: 10px;
+      padding: 5px;
+      background: green;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    .disabled {
+      background: red;
+    }
+  </style>
+</head>
+<body>
+  <h2>Auto Trading Plugin</h2>
+  <button id="startStopButton" class="toggle-button">Start</button>
+  <div>
+    <h3>Patterns</h3>
+    <label><input type="checkbox" id="bullishPattern"> Bullish Patterns</label><br>
+    <label><input type="checkbox" id="bearishPattern"> Bearish Patterns</label>
+  </div>
+  <button id="viewJournal">View Journal</button>
+  <div id="aggregatedView">
+    <h3>Aggregated View</h3>
+    <p>Total Trades: <span id="totalTrades">0</span></p>
+    <p>Total P/L: <span id="totalPL">0</span></p>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
